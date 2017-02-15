@@ -1,0 +1,46 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+
+ * {
+   font-family: 'Georgia', 'Times', serif;
+   box-sizing: border-box;
+
+ }
+
+
+h1 {
+  background-image: url(https://i.reddituploads.com/6c0e31a5aedb40d7820403d9a4fe2e2a?fit=max&h=1536&w=1536&s=8231ea051dabec52c1b1973c5a20c0b0);
+  height: 200px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  display: grid;
+}
+
+header {
+   background-image: url(https://images.unsplash.com/photo-1455267847942-f4fdb784f0c5?dpr=1&auto=format&crop=entropy&fit=crop&w=1500&h=1000&q=80&cs=tinysrgb);
+   height: 200px;
+   background-position: center center;
+   background-size: contain;
+ }
+
+ body {
+   color: SeaGreen;
+   text-decoration: none;
+ }
+
+ img {
+   border-radius: 100%;
+ }

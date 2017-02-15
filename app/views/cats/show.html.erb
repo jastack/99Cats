@@ -1,0 +1,43 @@
+<table>
+  <tr>
+    <th>Name:</th>
+    <th><%= @cat.name %></th>
+  </tr>
+  <tr>
+    <td>Color:</td>
+    <td><%= @cat.color %></td>
+  </tr>
+  <tr>
+    <td>Sex:</td>
+    <td><%= @cat.sex %></td>
+  </tr>
+  <tr>
+    <td>Birthdate:</td>
+    <td><%= @cat.birth_date %></td>
+  </tr>
+  <tr>
+    <td>Description:</td>
+    <td><%= @cat.description%></td>
+  </tr>
+</table>
+
+<br>
+
+<table>
+  <% @rentals = CatRentalRequest.where(cat_id: @cat.id) %>
+<% @rentals.sort {|el1, el2| el1.start_date <=> el2.start_date}.each do |rental| %>
+  <%= "Start Date: #{rental.start_date}" %>
+  <%= "End Date #{rental.end_date}" %>
+  <br>
+<% end %>
+</table>
+
+<br>
+
+<form action="/cats">
+  <input type="submit" value="All Cats" />
+</form>
+
+<form action="/cats/<%= @cat.id %>/edit">
+  <input type="submit" value="Edit Cat" />
+</form>

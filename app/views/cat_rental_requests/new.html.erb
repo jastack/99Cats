@@ -1,0 +1,44 @@
+<!--
+  Things to change:
+    - action (done!)
+    - hidden input patch (done!)
+    - pre-filled values (done!)
+    - submit button (done!)
+-->
+
+
+<% action_url = cat_rental_requests_url %>
+
+<form action="<%= action_url %>" method="post">
+
+
+  <label for="cat_rental_request_cat_id">Cat</label>
+  <select id="cat_rental_request_cat_id" name="cat_rental_request[cat_id]">
+    <option value="Select Cat" disabled="true" selected="true">Select Cat</option>
+    <% @cats.each do |cat| %>
+      <option value= '<%= cat.id %>'> <%= cat.name %> </option>
+    <% end %>
+  </select>
+
+
+  <!-- <label for="color">Color</label>
+  <select id="color" name="cat[color]">
+    <option value="Select Color" disabled="true" selected="true">Select Color</option>
+    <option value="Black">Black</option>
+    <option value="White">White</option>
+    <option value="Red">Red</option>
+  </select> -->
+
+
+  <br>
+
+  <label for="start_date">Start Date</label>
+  <input id="start_date" type="date" name="cat_rental_request[start_date]" value="cat_rental_request.start_date">
+
+  <label for="end_date">End Date</label>
+  <input id="end_date" type="date" name="cat_rental_request[end_date]" value="cat_rental_request.end_date">
+
+  <br>
+
+  <input type="submit" value="<%= action = 'add cat rental request'%>">
+</form>

@@ -1,0 +1,23 @@
+<body>
+  <header>Welcome to the Cat Shelter!</header>
+  <% @cats.each do |cat| %>
+    <ul>
+      <h1>Cat</h1>
+      <li>Name: <a href="cats/<%= cat.id %>" > <%= cat.name %> </a></li>
+      <li>Color: <%= cat.color %></li>
+      <li>Sex: <%= cat.sex %></li>
+      <li>Birthdate: <%= cat.birth_date %></li>
+      <li>Description: <%= cat.description %></li>
+    </ul>
+  <% end %>
+
+  <form action="cat_rental_requests/new">
+    <input type="submit" value="Rent a Cat!" />
+  </form>
+
+  <br>
+
+  <form action="cats/new">
+    <input type="submit" value="Add a Cat!" />
+  </form>
+</body>

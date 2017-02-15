@@ -1,0 +1,7 @@
+<% @cat_rental_requests.each do |req| %>
+  <ul>
+    <li>Name: <%= Cat.find_by(id: req.cat_id).name %></li>
+    <li>Start Date: <%= req.start_date %></li>
+    <li>End Date: <%= req.end_date %></li>
+  </ul>
+<% end %>
